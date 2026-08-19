@@ -1,0 +1,75 @@
+/* My Research section */
+#section-markdown.research-section {
+  width: 100%;
+}
+
+/* Remove the outer max-w-prose restriction */
+#section-markdown.research-section > div.flex.flex-col {
+  display: flex;
+  width: 100%;
+  max-width: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* Make the research text wider than Tailwind's default prose width */
+#section-markdown.research-section > div.flex.flex-col > .prose {
+  width: 100%;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+/* Keep paragraphs readable and prevent excessive line length */
+#section-markdown.research-section > div.flex.flex-col > .prose p {
+  width: 100%;
+  max-width: none;
+}
+
+/* Keep the title centered */
+#section-markdown.research-section
+  > div.flex.flex-col
+  > div:not(.prose) {
+  text-align: center;
+}
+
+/* Smaller horizontal spacing on mobile screens */
+@media (max-width: 640px) {
+  #section-markdown.research-section > div.flex.flex-col {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #section-markdown.research-section > div.flex.flex-col > .prose {
+    max-width: 100% !important;
+  }
+}
+
+/* Widen the Recent Publications list */
+#section-content-collection.papers-section
+  > div.flex.flex-col.items-center.px-6
+  > div.container {
+  width: 100%;
+  max-width: 1000px !important;
+  box-sizing: border-box;
+}
+
+/* Ensure each citation uses the available width */
+#section-content-collection.papers-section .pub-list-item {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  #section-content-collection.papers-section
+    > div.flex.flex-col.items-center.px-6
+    > div.container {
+    max-width: 100% !important;
+  }
+}

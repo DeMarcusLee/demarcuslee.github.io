@@ -33,48 +33,6 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
-    design:
-      columns: '1'
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
   - block: collection
     id: news
     content:
@@ -104,6 +62,75 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+  - block: markdown
+    content:
+      title: '📚 My Research'
+      subtitle: ''
+      text: |-
+            My research interests include statistical decision theory, minimax optimality and adaptation high-dimensional variable selection, nonparametric statistics, statistical machine learning, and the generalization theory of deep learning.
+
+            I am particularly interested in developing theoretically grounded statistical and machine learning methods, with an emphasis on optimality, adaptivity, and reliable inference in high-dimensional and complex models.
+            
+    design:
+      columns: '1'
+      css_class: research-section
+#  - block: collection
+
+#    content:
+#      title: Featured Publications
+#      filters:
+#        folders:
+#          - publications
+#        featured_only: true
+#    design:
+#      view: article-grid
+#      columns: 2
+  - block: collection
+    #id: journal-publications
+    content:
+      title: Journal Articles
+      text: ''
+      count: 0
+      filters:
+        folders:
+          - publications
+        publication_type: article-journal
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      order: desc
+    design:
+      view: citation
+      css_class: papers-section
+
+  - block: collection
+    #id: conference-publications
+    content:
+      title: Conference Papers
+      text: ''
+      count: 0
+      filters:
+        folders:
+          - publications
+        publication_type: paper-conference
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      order: desc
+    design:
+      view: citation
+      css_class: papers-section
+  - block: collection
+    id: talks
+    content:
+      title: Recent & Upcoming Talks
+      filters:
+        folders:
+          - events
+    design:
+      view: card
   - block: cta-card
     demo: true # Only display this section in the HugoBlox Kit demo site
     content:
