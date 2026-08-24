@@ -13,6 +13,8 @@ content_meta:
   difficulty: 'Beginner'
   prerequisites: ['Markdown']
   trending: false
+
+draft: true
 ---
 
 👋 Welcome to your shiny new site. Ready to learn more?
