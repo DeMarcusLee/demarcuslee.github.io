@@ -8,13 +8,15 @@ tags:
   - Hugo Blox
   - Course
 
+build:
+  list: never
+
 content_meta:
   content_type: 'Course'
   difficulty: 'Beginner'
   prerequisites: ['Markdown']
   trending: false
 
-draft: true
 ---
 
 👋 Welcome to your shiny new site. Ready to learn more?
