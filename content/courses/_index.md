@@ -13,21 +13,11 @@ sections:
   - block: markdown
     content:
       text: |
-        Courses will be added soon.
+        ## Courses
 
-#sections:
- # - block: collection
-  #  id: courses
-   # content:
-    #  title: Courses
-     # filters:
-      #  tag: Course
-       # kinds:
-        #  - section
-   # design:
-    #  view: article-grid
-     # show_read_time: false
-     # show_date: false
-     # show_read_more: false
-     # columns: 1
+        非参数统计
+
+        {{< cards >}}
+          {{< card url="/courses/non-parametric/" title="non-parametric statistics" icon="academic-cap" subtitle="非参数检验交互演示：正态计分、符号检验与 KS 检验。" >}}
+        {{< /cards >}}
 ---

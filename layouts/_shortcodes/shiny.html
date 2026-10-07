@@ -1,0 +1,21 @@
+{{- $src := .Get "src" -}}
+{{- if not $src -}}
+  {{- errorf "The shiny shortcode requires a src parameter (%s)" .Position -}}
+{{- end -}}
+{{- $src = relURL $src -}}
+<div class="shiny-embed" data-pagefind-ignore>
+  <p class="shiny-embed-link">
+    <a href="{{ $src }}" target="_blank" rel="noopener">在独立页面打开演示 ↗</a>
+  </p>
+  <iframe
+    class="shiny-embed-frame"
+    src="{{ $src }}"
+    title="{{ .Get "title" | default "Shiny 交互演示" }}"
+    width="100%"
+    height="{{ .Get "height" | default "1550" }}"
+    {{ with .Get "height" }}style="height: {{ . }}px;"{{ end }}
+    loading="lazy"
+    allow="fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
